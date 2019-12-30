@@ -1,5 +1,10 @@
 package me.dapac.beans;
 
+import org.springframework.context.annotation.Bean;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Person {
 
     private int id;
@@ -8,10 +13,11 @@ public class Person {
     private Country country;
     private City city;
 
+    @PostConstruct
     private void init() {
         System.out.println("Before init person bean");
     }
-
+    @PreDestroy
     private void destroy() {
         System.out.println("Person bean to be destroyed");
     }
