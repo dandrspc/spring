@@ -4,9 +4,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="person" class="me.dapac.beans.Person">
-        <constructor-arg index="0" type="int" value="1"></constructor-arg>
-        <constructor-arg index="2" type="java.lang.String" value="dandrspc"></constructor-arg>
-        <constructor-arg index="1" type="java.lang.String" value="Daniel"></constructor-arg>
+        <property name="id" value="1"></property>
+        <property name="name" value="Daniel"></property>
+        <property name="nickname" value="dandrspc"></property>
+        <property name="country" ref="country"></property>
     </bean>
 
+    <bean id="country" class="me.dapac.beans.Country">
+        <property name="name" value="Colombia"></property>
+        <property name="city" ref="city"></property>
+    </bean>
+
+    <bean id="city" class="me.dapac.beans.City">
+        <property name="name" value="Cali"></property>
+    </bean>
 </beans>

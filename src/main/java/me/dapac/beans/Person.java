@@ -5,16 +5,7 @@ public class Person {
     private int id;
     private  String name;
     private  String nickname;
-
-    public Person(int id, String name, String nickname) {
-        this.id = id;
-        this.name = name;
-        this.nickname = nickname;
-    }
-
-    public Person(int id) {
-        this.id = id;
-    }
+    private Country country;
 
     public int getId() {
         return id;
@@ -38,5 +29,23 @@ public class Person {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", country=" + country +
+                '}';
     }
 }
