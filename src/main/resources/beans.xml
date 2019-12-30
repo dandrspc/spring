@@ -7,15 +7,17 @@
         <property name="id" value="1"></property>
         <property name="name" value="Daniel"></property>
         <property name="nickname" value="dandrspc"></property>
-        <property name="country" ref="country"></property>
+        <property name="country">
+            <bean id="country" class="me.dapac.beans.Country">
+                <property name="name" value="Colombia"></property>
+                <property name="city">
+                    <bean id="city" class="me.dapac.beans.City">
+                        <property name="name" value="Cali"></property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
     </bean>
 
-    <bean id="country" class="me.dapac.beans.Country">
-        <property name="name" value="Colombia"></property>
-        <property name="city" ref="city"></property>
-    </bean>
 
-    <bean id="city" class="me.dapac.beans.City">
-        <property name="name" value="Cali"></property>
-    </bean>
 </beans>
