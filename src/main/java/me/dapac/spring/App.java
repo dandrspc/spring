@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
 //        XML configuraction
         ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
-        Person person = (Person) appContext.getBean("person");
+        Person person = (Person) appContext.getBean("person2");
 
         System.out.println(person);
     }
