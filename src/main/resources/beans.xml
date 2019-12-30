@@ -3,35 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person" name="person2" class="me.dapac.beans.Person">
+    <bean id="person" class="me.dapac.beans.Person" autowire="byName">
         <property name="id" value="1"></property>
         <property name="name" value="Daniel"></property>
         <property name="nickname" value="dandrspc"></property>
-        <property name="country" ref="country"></property>
     </bean>
 
     <bean id="country" class="me.dapac.beans.Country">
         <property name="name" value="Colombia"></property>
-        <property name="cities">
-            <list>
-                <ref bean="Cali" />
-                <ref bean="Bogota"/>
-                <ref bean="Medellin"/>
-            </list>
-        </property>
     </bean>
 
-    <bean id="Cali" class="me.dapac.beans.City">
+    <bean id="city" class="me.dapac.beans.City">
         <property name="name" value="Cali"></property>
     </bean>
-
-    <bean id="Bogota" class="me.dapac.beans.City">
-        <property name="name" value="Bogotá"></property>
-    </bean>
-
-    <bean id="Medellin" class="me.dapac.beans.City">
-        <property name="name" value="Medellín"></property>
-    </bean>
-
-    <alias name="person" alias="personBean"/>
 </beans>

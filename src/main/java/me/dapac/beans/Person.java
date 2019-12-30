@@ -3,9 +3,10 @@ package me.dapac.beans;
 public class Person {
 
     private int id;
-    private  String name;
-    private  String nickname;
+    private String name;
+    private String nickname;
     private Country country;
+    private City city;
 
     public int getId() {
         return id;
@@ -39,6 +40,14 @@ public class Person {
         this.country = country;
     }
 
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -46,6 +55,7 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", country=" + country +
+                ", city=" + city +
                 '}';
     }
 }
