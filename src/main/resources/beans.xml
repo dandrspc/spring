@@ -12,11 +12,25 @@
 
     <bean id="country" class="me.dapac.beans.Country">
         <property name="name" value="Colombia"></property>
-        <property name="city" ref="city"></property>
+        <property name="cities">
+            <list>
+                <ref bean="Cali" />
+                <ref bean="Bogota"/>
+                <ref bean="Medellin"/>
+            </list>
+        </property>
     </bean>
 
-    <bean id="city" class="me.dapac.beans.City">
+    <bean id="Cali" class="me.dapac.beans.City">
         <property name="name" value="Cali"></property>
+    </bean>
+
+    <bean id="Bogota" class="me.dapac.beans.City">
+        <property name="name" value="Bogotá"></property>
+    </bean>
+
+    <bean id="Medellin" class="me.dapac.beans.City">
+        <property name="name" value="Medellín"></property>
     </bean>
 
     <alias name="person" alias="personBean"/>
