@@ -3,6 +3,7 @@ package me.dapac.spring;
 import me.dapac.beans.Person;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
@@ -14,12 +15,10 @@ public class App {
          */
         BeanFactory appContext = new ClassPathXmlApplicationContext("beans.xml");
         Person person = (Person) appContext.getBean("person");
-        person.setId(1);
-        person.setName("Daniel");
-        person.setNickname("dandrspc");
-        Person person2 = (Person) appContext.getBean("person");
 
-        System.out.println(person);
-        System.out.println(person2);
+        System.out.println(person.getNickname());
+
+        // Is important to close the context for the destruction of the bean
+        ((ConfigurableApplicationContext)appContext).close();
     }
 }

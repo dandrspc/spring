@@ -2,9 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
     <!--   scope=  Singleton & prototype-->
     <!--    lazy init only available for singleton scope -->
-    <bean id="person" class="me.dapac.beans.Person" autowire="byName" scope="singleton" lazy-init="true"></bean>
+    <bean id="person" class="me.dapac.beans.Person" autowire="byName" init-method="init" destroy-method="destroy">
+        <property name="nickname" value="dandrspc"></property>
+    </bean>
 
     <bean id="country" class="me.dapac.beans.Country">
         <property name="name" value="Colombia"></property>

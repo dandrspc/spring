@@ -8,6 +8,14 @@ public class Person {
     private Country country;
     private City city;
 
+    private void init() {
+        System.out.println("Before init bean");
+    }
+
+    private void destroy() {
+        System.out.println("Bean to be destroyed");
+    }
+
     public int getId() {
         return id;
     }
