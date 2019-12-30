@@ -9,11 +9,11 @@ public class Person {
     private City city;
 
     private void init() {
-        System.out.println("Before init bean");
+        System.out.println("Before init person bean");
     }
 
     private void destroy() {
-        System.out.println("Bean to be destroyed");
+        System.out.println("Person bean to be destroyed");
     }
 
     public int getId() {

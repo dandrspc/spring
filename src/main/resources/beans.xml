@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-init-method="init" default-destroy-method="destroy">
 
     <!--   scope=  Singleton & prototype-->
     <!--    lazy init only available for singleton scope -->
-    <bean id="person" class="me.dapac.beans.Person" autowire="byName" init-method="init" destroy-method="destroy">
+    <bean id="person" class="me.dapac.beans.Person" autowire="byName">
         <property name="nickname" value="dandrspc"></property>
     </bean>
 

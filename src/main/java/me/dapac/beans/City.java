@@ -12,6 +12,14 @@ public class City {
         this.name = name;
     }
 
+    private void init() {
+        System.out.println("Before init city bean");
+    }
+
+    private void destroy() {
+        System.out.println("City bean to be destroyed");
+    }
+
     @Override
     public String toString() {
         return "City{" +
