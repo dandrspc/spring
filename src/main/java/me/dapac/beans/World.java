@@ -1,7 +1,9 @@
 package me.dapac.beans;
 
-public class World {
+import org.springframework.beans.factory.annotation.Value;
 
+public class World {
+    @Value("Hello World")
     private String greeting;
 
     public  World() {

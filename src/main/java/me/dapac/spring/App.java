@@ -1,16 +1,28 @@
 package me.dapac.spring;
 
+import me.dapac.beans.WorldConfig;
+import me.dapac.beans.MarsConfig;
 import me.dapac.beans.World;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {
 
     public static void main(String[] args) {
+//        XML configuraction
+//        ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
 
-        ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
-        World world = appContext.getBean(World.class);
-        System.out.println(world.getGreeting());
+//        Annotation configuraton
+//        ApplicationContext appContext = new AnnotationConfigApplicationContext(WorldConfig.class, MarsConfig.class);
+
+//        Register mode config
+        AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
+        appContext.register(WorldConfig.class);
+        appContext.register(MarsConfig.class);
+        appContext.refresh();
+
+        World world = (World) appContext.getBean("world");
+        World mars = (World) appContext.getBean("mars");
+
+        System.out.println(world.getGreeting() + "\n" + mars.getGreeting());
     }
 }
