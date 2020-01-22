@@ -1,11 +1,13 @@
 package me.dapac.beans;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class Person {
+public class Person implements InitializingBean, DisposableBean {
 
     private int id;
     private String name;
@@ -13,14 +15,14 @@ public class Person {
     private Country country;
     private City city;
 
-    @PostConstruct
+    /*@PostConstruct
     private void init() {
         System.out.println("Before init person bean");
     }
     @PreDestroy
     private void destroy() {
         System.out.println("Person bean to be destroyed");
-    }
+    }*/
 
     public int getId() {
         return id;
@@ -71,5 +73,15 @@ public class Person {
                 ", country=" + country +
                 ", city=" + city +
                 '}';
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Before init person bean");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("Person bean to be destroyed");
     }
 }
