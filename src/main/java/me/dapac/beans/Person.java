@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class Person implements InitializingBean, DisposableBean {
+public class Person implements DisposableBean, InitializingBean{
 
     private int id;
     private String name;

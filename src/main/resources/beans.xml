@@ -3,8 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--   scope=  Singleton & prototype-->
-    <!--    lazy init only available for singleton scope -->
+
+    <bean class="me.dapac.beans.DapacBeanPostProcessor"></bean>
+
     <bean id="person" class="me.dapac.beans.Person" autowire="byName">
         <property name="nickname" value="dandrspc"></property>
     </bean>
