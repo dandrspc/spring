@@ -1,18 +1,17 @@
-# Spring Framework
+# __Spring Framework__
 
-En el siguiente blouque de tutriales, trataré de explicar algunos concpetos clave para el dominio de __Spring Framework__ basados en la lista de reproducción del canal [mitocode](https://www.youtube.com/playlist?list=PLvimn1Ins-40CImsffjCkv_TrKzYiB1gb)
+En el siguiente bloque de tutoriales, trataré de explicar algunos conceptos clave para el dominio de __Spring Framework__ basados en la lista de reproducción del canal de youtube [mitocode](https://www.youtube.com/playlist?list=PLvimn1Ins-40CImsffjCkv_TrKzYiB1gb)
 
 El código de cada tutorial estará en una rama distinta de este repositorio. 
 
 ## Contenido
 
-1. Inversión de Control
-1. Inyección de dependencias
+1. [Inversión de Control e Inyección de dependencias](./md/IoC.md)
 1. Configuración de IDE
 1. Hola mundo
 1. Configuración con anotaciones
 1. Inyección por constructor
-1. Beans aninados
+1. Beans anidados
 1. Referenciando Beans
 1. Colecciones
 1. Autowire
@@ -22,7 +21,15 @@ El código de cada tutorial estará en una rama distinta de este repositorio.
 1. PostConstruct y PreDestroy
 1. Uso de interfaces
 1. Anotación Required
-1. Anotarión Autowired y Quilifier  
+1. Anotación Autowired y Quialifier  
 1. Stereotypes
 
 ___
+
+### __Descargar y correr proyecto__
+
+```
+git clone https://github.com/dandrspc/spring.git
+cd spring
+mvn install
+```
