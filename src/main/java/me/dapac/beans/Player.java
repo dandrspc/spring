@@ -1,6 +1,7 @@
 package me.dapac.beans;
 
 import me.dapac.interfaces.ITeam;
+import org.springframework.beans.factory.annotation.Required;
 
 public class Player {
 
@@ -20,6 +21,7 @@ public class Player {
         return name;
     }
 
+    @Required
     public void setName(String name) {
         this.name = name;
     }

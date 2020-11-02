@@ -3,6 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+        <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
         <bean id="ronaldo" class="me.dapac.beans.Player">
             <property name="dorsal" value="7"></property>
             <property name="name" value="Cristiano Ronaldo"></property>

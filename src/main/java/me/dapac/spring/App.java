@@ -21,8 +21,8 @@ public class App {
         Player player = (Player) appContext.getBean("ronaldo");
         System.out.println(player.getName() +  "-" + player.getTeam().display());
 
-        ITeam team = (ITeam)appContext.getBean("madrid  ");
-        System.out.println(team.display());
+        //ITeam team = (ITeam)appContext.getBean("madrid  ");
+        //System.out.println(team.display());
 
         // Is important to close the context for the destruction of the bean
         ((ConfigurableApplicationContext)appContext).close();
