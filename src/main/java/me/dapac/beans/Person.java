@@ -77,11 +77,11 @@ public class Person implements DisposableBean, InitializingBean{
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Before init person bean");
+        System.out.println("INIT PERSON");
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("Person bean to be destroyed");
+        System.out.println("DESTROY PERSON");
     }
 }
