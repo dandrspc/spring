@@ -18,7 +18,7 @@ public class App {
          */
         BeanFactory appContext = new ClassPathXmlApplicationContext("beans.xml");
 
-        Player player = (Player) appContext.getBean("ronaldo");
+        Player player = (Player) appContext.getBean("player");
         System.out.println(player.getName() +  "-" + player.getTeam().display());
 
         //ITeam team = (ITeam)appContext.getBean("madrid  ");

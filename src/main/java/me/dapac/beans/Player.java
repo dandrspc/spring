@@ -3,14 +3,16 @@ package me.dapac.beans;
 import me.dapac.interfaces.ITeam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component()
 public class Player {
 
     private int dorsal;
+    @Value("Cristiano Ronaldo")
     private String name;
     @Autowired
-    @Qualifier("madridQualifier")
     private ITeam team;
 
     public int getDorsal() {

@@ -7,17 +7,6 @@
 <!--        <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>-->
 <!--        <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor  "/>-->
 
-        <context:annotation-config/>
-
-        <bean id="ronaldo" class="me.dapac.beans.Player">
-            <property name="dorsal" value="7"></property>
-            <property name="name" value="Cristiano Ronaldo"></property>
-            <!-- <property name="team" ref="madrid"></property> -->
-        </bean>
-
-        <bean id="madrid" class="me.dapac.beans.Madrid">
-            <qualifier value="madridQualifier"></qualifier>
-        </bean>
-<!--        <bean id="juventus" class="me.dapac.beans.Juventus"></bean>-->
+        <context:component-scan base-package="me.dapac"/>
 
 </beans>
