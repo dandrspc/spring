@@ -3,18 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+        <bean id="ronaldo" class="me.dapac.beans.Player">
+            <property name="dorsal" value="7"></property>
+            <property name="name" value="Cristiano Ronaldo"></property>
+            <property name="team" ref="madrid"></property>
+        </bean>
 
-    <bean class="me.dapac.beans.DapacBeanPostProcessor"></bean>
+        <bean id="madrid" class="me.dapac.beans.Madrid"></bean>
+        <bean id="juventus" class="me.dapac.beans.Juventus"></bean>
 
-    <bean id="person" class="me.dapac.beans.Person" autowire="byName">
-        <property name="nickname" value="dandrspc"></property>
-    </bean>
-
-    <bean id="country" class="me.dapac.beans.Country">
-        <property name="name" value="Colombia"></property>
-    </bean>
-
-    <bean id="city" class="me.dapac.beans.City">
-        <property name="name" value="Cali"></property>
-    </bean>
 </beans>
