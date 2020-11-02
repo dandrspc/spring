@@ -1,12 +1,16 @@
 package me.dapac.beans;
 
 import me.dapac.interfaces.ITeam;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
 
 public class Player {
 
     private int dorsal;
     private String name;
+    @Autowired
+    @Qualifier("madridQualifier")
     private ITeam team;
 
     public int getDorsal() {
@@ -21,7 +25,7 @@ public class Player {
         return name;
     }
 
-    @Required
+    //@Required
     public void setName(String name) {
         this.name = name;
     }
