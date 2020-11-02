@@ -8,10 +8,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
 
     public static void main(String[] args) {
-//        XML configuraction
+//        XML configuration
 //        ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
 
-//        Annotation configuraton
+//        Annotation configuration
 //        ApplicationContext appContext = new AnnotationConfigApplicationContext(WorldConfig.class, MarsConfig.class);
 
 //        Register mode config
